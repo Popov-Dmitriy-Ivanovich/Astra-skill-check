@@ -22,3 +22,9 @@ $ sudo apt dist-upgrade
 Обновлено 0, Установлено 0 ...  
 
 resourse: https://wiki.astralinux.ru/pages/viewpage.action?pageId=212077347  
+  
+# 3.  Установить из нашего репозитория QtCreator и пакет qtbase5-examples  
+  
+$ sudo apt install qtcreator qtbase5-examples  
+  
+
