@@ -27,4 +27,14 @@ resourse: https://wiki.astralinux.ru/pages/viewpage.action?pageId=212077347
   
 $ sudo apt install qtcreator qtbase5-examples  
   
+# 4.  Открыть проект examples/widgets/itemviews/dirview:  
+  
+$ cp -r /usr/lib/x86_64-linux-gnu/qt5/examples/widgets/itemviews/dirview/ ~  
 
+# 5.  Сделать стартовой директорией домашнюю директорию текущего пользователя. То есть того пользователя, что запускает утилиту  
+  
+QTreeView::setRootIndex(QDir::cleanPath(QDir::homePath()))  
+  
+# 6.  Отображать файлы, папки, в том числе и скрытые  
+  
+QFileSystem::setFilter(QDir::AllEntries | QDir::Hidden)
