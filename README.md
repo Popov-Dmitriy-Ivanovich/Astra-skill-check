@@ -37,4 +37,8 @@ QTreeView::setRootIndex(QDir::cleanPath(QDir::homePath()))
   
 ## 6.  Отображать файлы, папки, в том числе и скрытые  
   
-QFileSystem::setFilter(QDir::AllEntries | QDir::Hidden)
+QFileSystem::setFilter(QDir::AllEntries | QDir::Hidden)  
+  
+## 7.  Добавить QLineEdit виджет, который использовать для фильтрации по именам файлов и папок  
+  
+Написал класс, который делает то же, что пример, добавил QLineEdit в него, мне было проще и привычнее так, если необходимо оставить пример таким, каким он был - могу переделать
