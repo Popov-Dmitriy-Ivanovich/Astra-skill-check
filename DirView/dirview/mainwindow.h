@@ -2,8 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QApplication>
-#include <QDesktopWidget>
 #include <QBoxLayout>
+#include <QDesktopWidget>
 #include <QFileIconProvider>
 #include <QFileSystemModel>
 #include <QLineEdit>
@@ -34,8 +34,7 @@ public:
     tree->setAnimated(false);
     tree->setIndentation(20);
     tree->setSortingEnabled(true);
-    const QSize availableSize =
-        QApplication::desktop()->availableGeometry(tree).size();
+    const QSize availableSize = QApplication::desktop()->availableGeometry(tree).size();
     tree->resize(availableSize / 2);
     tree->setColumnWidth(0, tree->width() / 3);
 
@@ -48,17 +47,8 @@ public:
     setMinimumHeight(400);
     setMinimumWidth(750);
 
-    connect(searchBar, &QLineEdit::textEdited, this,
-            &MainWindow::changeModelFilter);
+    connect(searchBar, &QLineEdit::textEdited, this, &MainWindow::changeModelFilter);
   }
-
-private:
-  QString rootPath;
-  QFileSystemModel model;
-  QTreeView *tree;
-  QLineEdit *searchBar;
-  QVBoxLayout *layout;
-  QStringList filterList;
 
 public slots:
   void changeModelFilter(const QString &text) {
@@ -68,6 +58,14 @@ public slots:
     model.setNameFilters(filterList);
     model.setNameFilterDisables(false);
   }
+
+private:
+  QString rootPath;
+  QFileSystemModel model;
+  QTreeView *tree;
+  QLineEdit *searchBar;
+  QVBoxLayout *layout;
+  QStringList filterList;
 };
 
 #endif // MAINWINDOW_H
