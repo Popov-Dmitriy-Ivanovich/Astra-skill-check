@@ -3,16 +3,22 @@
   
 #### 1 install virtualbox:  
   
-$ sudo pacman -S virtualbox virtualbox-host-modules-arch  
+$ sudo pacman -S virtualbox virtualbox-host-modules-arch   
   
 #### 2 install Astralinux on virtualbox   
   
 open virtualbox, choose astralinux image and choose option "Графическая установка" press button "Продолжить" until system installed  
   
+![Alt text](astra_linux_setup.png "a title")  
+  
 ## 2.  Обновиться до последней версии  
 
-В моем случае система везде написала, что не нуждается в обновлении (менеджер пакетов Synaptyc)  
+В моем случае система везде написала, что не нуждается в обновлении  
   
+менеджер пакетов Synaptyc:    
+  
+ ![Alt text](synaptic_update.png "a title")  
+
 $ sudo apt update  
 .....  
 Все пакеты имеют последние версии  
@@ -42,4 +48,7 @@ QFileSystem::setFilter(QDir::AllEntries | QDir::Hidden)
 ## 7.  Добавить QLineEdit виджет, который использовать для фильтрации по именам файлов и папок  
   
 Написал класс, который делает то же, что пример, добавил QLineEdit в него, мне было проще и привычнее так, если необходимо оставить пример таким, каким он был - могу переделать  
-![Alt text](final_program.png "a title")
+![Alt text](final_program.png "Общий вид программы")  
+  
+![Alt text](search_widget.png "a title")
+
